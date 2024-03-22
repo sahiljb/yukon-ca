@@ -1,0 +1,1 @@
+{"version":3,"sources":["molecules/cta_card_thumbnail/scss/styles.scss"],"names":[],"mappings":"AAKI,aAAA,QAAA,MAGE,iBAAA,OAAA,KAAA,MAAA","file":"styles.min.css","sourcesContent":["/* Add your code here */\n\n\n.thumbnail {\n  a {\n    @apply block;\n\n    img {\n      @apply w-full h-auto;\n    }\n  }\n}\n"]}

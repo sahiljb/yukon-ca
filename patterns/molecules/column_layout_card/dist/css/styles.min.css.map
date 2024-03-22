@@ -1,0 +1,1 @@
+{"version":3,"sources":["molecules/column_layout_card/scss/styles.scss"],"names":[],"mappings":"AAEI,sBAAA,QAAA,MACA,cAAA,QAIA,uBAAA,eAAA,QAGE,yBAAA,cAAA","file":"styles.min.css","sourcesContent":[".column-layout-card {\n  a {\n    @apply block;\n    @apply mb-5;\n  }\n\n  h4 {\n    @apply pb-2.5;\n\n    a {\n      @apply mb-0;\n    }\n  }\n}\n"]}

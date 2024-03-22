@@ -1,0 +1,1 @@
+{"version":3,"sources":["molecules/callout_card/scss/styles.scss"],"names":[],"mappings":"AAEI,2DAAA,gBAAA,OAOE,kCAAA,OAAA","file":"styles.min.css","sourcesContent":[".node--type-site-wide-alert {\n  .callout-card__content-wrapper {\n    @apply justify-center;\n  }\n}\n\n.callout-card {\n  .field--name-body {\n    & > p {\n      @apply m-0;\n    }\n  }\n}\n"]}
