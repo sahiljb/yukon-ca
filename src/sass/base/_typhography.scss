@@ -1,0 +1,62 @@
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply my-0;
+  }
+
+  h1 {
+    @apply text-4xl font-light;
+  }
+
+  h2 {
+    @apply text-3xl font-medium;
+  }
+
+  h3 {
+    @apply text-2xl font-medium;
+  }
+
+  h4 {
+    @apply text-xl font-medium;
+  }
+
+  h5 {
+    @apply text-lg font-medium;
+  }
+
+  .field-label {
+    @apply text-lg;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .field-label,
+  .field__label {
+    @apply font-medium mt-6 text-black;
+
+  }
+
+  .node__content {
+    .field--name-body,
+    .field-item-content {
+      @apply leading-relaxed;
+
+      h2,
+      .h2 {
+        @apply pt-10;
+      }
+
+      h3,
+      .h3 {
+        @apply font-medium pt-5;
+      }
+    }
+  }
+}

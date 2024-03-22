@@ -1,0 +1,11 @@
+@import "src/sass/core";
+
+.quicklink-card {
+  @apply shadow-card;
+  @apply border border-solid rounded border-blue-mid hover:border-blue-200;
+  @apply h-full;
+
+  a {
+    @apply py-6;
+  }
+}

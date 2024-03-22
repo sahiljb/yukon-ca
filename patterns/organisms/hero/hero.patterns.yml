@@ -1,0 +1,34 @@
+hero:
+  label: Hero Banner
+  description: A hero image with a optional content.
+  variants:
+    default:
+      label: Default
+      description: Hero Banner Text.
+    image:
+      label: With image
+      description: Hero Banner Image.
+  fields:
+    title:
+      type: string
+      label: Title
+      description: A title.
+      preview: 'Lorem Ipsum'
+    content:
+      type: text
+      label: Content
+      description: Optional text to be displayed with the title.
+      preview: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sem nunc, tempus a dictum et, finibus porta elit.'
+    image:
+      type: string
+      label: Image
+      description: Markup for an image. Alternatively, provide image_* properties.
+      preview:
+        theme: image
+        uri: https://picsum.photos/1280/560
+  libraries:
+    -
+      hero:
+        css:
+          component:
+            dist/css/styles.min.css: { minified: true }

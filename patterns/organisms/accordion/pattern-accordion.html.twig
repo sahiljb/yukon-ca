@@ -1,0 +1,16 @@
+{# Prepare attributes #}
+{% set prefix = 'accordion' %}
+
+{% set classes = [
+  prefix,
+  prefix ~ '--' ~ variant,
+  more_link|render ? 'has-more-link' : ''
+] %}
+
+{% set attributes = attributes.addClass(classes) %}
+
+<div class="accordion">
+  {% for item in items %}
+    {{ item.content }}
+  {% endfor %}
+</div>

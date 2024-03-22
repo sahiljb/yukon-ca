@@ -1,0 +1,42 @@
+{# Prepare attributes #}
+{% set prefix = 'carousel' %}
+
+{% set classes = [
+  prefix,
+  prefix ~ '--' ~ variant,
+  has_grey_background
+] %}
+
+{{ attach_library('desk_theme/swiper') }}
+
+{% set content %}
+  <div class="container">
+    {# Items #}
+    <div class="content">
+      <div class="carousel-swiper swiper-container" id="carousel-{{ paragraph_id }}">
+        <div class="swiper-wrapper">
+          {% for item in items %}
+            {# For associative arrays #}
+            {% if item.title is not empty %}
+              {{ pattern('card', item) }}
+              {# For views rows #}
+            {% elseif item.content %}
+              {{ item.content }}
+              {# For everything else, simply render #}
+            {% else %}
+              {{ item }}
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="carousel-{{ paragraph_id }}-prev swiper-button-prev"></div>
+    <div class="carousel-{{ paragraph_id }}-next swiper-button-next"></div>
+  </div>
+{% endset %}
+
+{{ pattern('section', {
+  content:  content,
+  attribs:  attributes,
+}, 'default') }}

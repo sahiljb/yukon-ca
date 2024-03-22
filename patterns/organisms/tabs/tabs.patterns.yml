@@ -1,0 +1,55 @@
+tabs:
+  label: Tabs
+  description: A Tabs component.
+  variants:
+    default:
+      label: Default
+      description: With tabs.
+    pills:
+      label: With pills
+      description: With Bootstrap 5 pills.
+  fields:
+    title:
+      type: text
+      label: Title
+      description: A title.
+      preview: 'Phonetic alphabets'
+    tab_id:
+      type: string
+      label: Main identifier.
+      description: Unique id.
+      preview: 'some-unique-id'
+    hide_title:
+      type: string
+      label: Hide Title
+      description: Hide the title.
+      preview: ''
+    sequential:
+      type: string
+      label: Icon for links
+      description: Number or icon for anchor links.
+      preview: ''
+    summary:
+      type: text
+      label: Summary
+      description: A summary.
+      preview: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis erat ultrices ipsum ultricies, id faucibus eros iaculis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
+    items:
+      type: mixed
+      label: Items
+      description: Accordion Items
+      preview:
+        - title: 'Day'
+          content: 'Duis tempus elementum neque. In felis urna, facilisis ac justo nec, fringilla mollis dolor.'
+        - title: 'Week'
+          summary: 'Duis tempus elementum neque. In felis urna, facilisis ac justo nec, fringilla mollis dolor.'
+        - title: 'Month'
+          summary: 'Duis tempus elementum neque. In felis urna, facilisis ac justo nec, fringilla mollis dolor.'
+  libraries:
+    -
+      tabs:
+        css:
+          component:
+            dist/css/styles.min.css: { minified: true }
+        js:
+          dist/js/tabs.min.js: { minified: true }

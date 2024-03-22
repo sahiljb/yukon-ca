@@ -1,0 +1,27 @@
+{% set prefix = 'video' %}
+{% set classes = [
+  prefix
+] %}
+
+{% set attributes = attributes.addClass(classes) %}
+
+{% set content %}
+  <div class="container">
+    {% if not hide_title %}
+      <div class="title">
+        <h2>{{ title }}</h2>
+      </div>
+    {% endif %}
+
+    <div class="video">{{ video }}</div>
+
+    {% if caption|render %}
+      <div class="caption">{{ caption }}</div>
+    {% endif %}
+  </div>
+{% endset %}
+
+{{ pattern('section', {
+  content: content,
+  attribs: attributes,
+}, 'default') }}

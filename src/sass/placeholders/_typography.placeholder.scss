@@ -1,0 +1,19 @@
+@import "../variables";
+
+/* Paragraphes */
+
+%base {
+  @apply font-base font-normal text-base-mobile lg:text-base;
+}
+
+%grande {
+  @apply font-base font-normal text-grande;
+}
+
+%legendes {
+  @apply font-base font-normal text-legendes;
+}
+
+%mini-titre {
+  @apply font-base font-semibold text-[0.688rem] lg:text-[0.75rem] tracking-[0.031rem] uppercase leading-[1.25rem];
+}

@@ -1,0 +1,41 @@
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-width: 0;
+    border-style: solid;
+  }
+
+  html,
+  body {
+    @apply min-h-full font-base text-black;
+  }
+
+  img {
+    @apply max-w-full opacity-100;
+  }
+
+  img[data-src] {
+    @apply opacity-0;
+  }
+
+  a {
+    @apply underline text-blue-500;
+
+    &:visited {
+      @apply text-purple;
+    }
+
+    &:hover,
+    &:focus {
+      @apply text-blue-200;
+    }
+  }
+
+  .field {
+    .field-items {
+      @apply mt-6;
+    }
+  }
+
+}

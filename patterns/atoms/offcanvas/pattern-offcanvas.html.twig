@@ -1,0 +1,34 @@
+{% set prefix = 'offcanvas' %}
+{% set classes = [
+  prefix,
+  variant ? prefix ~ '--' ~ variant : '',
+  prefix ~ '-end',
+  'min-w-[400px]',
+  'w-3/5'
+] %}
+
+{% set labelId = offcanvas_id ~ 'Label' %}
+
+{%
+  set attributes = attributes.setAttribute('tabindex', '-1')
+  .setAttribute('id', offcanvas_id)
+  .setAttribute('aria-labelledby', labelId)
+%}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="offcanvas-header border-0 border-b-4 border-solid border-b-yellow py-4 md:py-10 px-[10%] md:px-[9%]">
+    <h5 id="{{ labelId }}" class="text-lg leading-5 md:text-heading">
+      {{ heading }}
+    </h5>
+  {# Close button #}
+    <button type="button" class="bg-transparent border-none p-2 inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 text-reset" data-bs-dismiss="offcanvas" aria-label="{{ 'Close'|t }}">
+      <span class="hidden md:block">{{ "close"|t }}</span>
+      <svg class="w-12 h-12 text-black-light stroke-2" viewBox="0 0 40 40" stroke="currentColor" fill="none">
+        <path d="M 10,10 L 30,30 M 30,10 L 10,30"></path>
+      </svg>
+    </button>
+  </div>
+  <div class="offcanvas-body py-[2%] px-[8%]">
+    {{ content }}
+  </div>
+</div>

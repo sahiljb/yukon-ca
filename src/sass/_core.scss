@@ -1,0 +1,46 @@
+/*
+* Theme core configuration
+*/
+
+/* Bootstrap base configuration */
+@import "bootstrap/scss/functions";
+
+/* Theme variables */
+@import "variables";
+
+/* Bootstrap variables */
+@import "bootstrap/scss/variables";
+
+
+// Remove unwanted colors
+$colors: map-remove($colors,
+  "blue",
+  "indigo",
+  "purple",
+  "pink",
+  "red",
+  "orange",
+  "yellow",
+  "green",
+  "teal",
+  "cyan",
+  "gray",
+  "gray-dark",
+  "success",
+  "info",
+  "warning",
+  "danger",
+  "light",
+  "dark"
+);
+
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+$utilities: (); /* Removing BS utilities. Remove this line to enable BS utilities */
+
+/* Theme mixins */
+@import "theme-icons";
+@import "theme-icons-classes";
+@import "mixins/index";

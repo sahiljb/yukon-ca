@@ -1,0 +1,34 @@
+blockquote:
+  label: 'Blockquote'
+  description: A block of text quoted from an external source.
+  fields:
+    content:
+      type: text
+      label: Content
+      description: The body of the quote.
+      preview: 'To be or to not to be... That is the question.'
+    attribution:
+      type: text
+      label: Attribution
+      description: Reference to the original author (optional).
+      preview: 'William Shakespeare'
+    cite:
+      type: uri
+      label: Citation
+      description: URL where the original text can be found (optional).
+      preview: 'https://example.com/'
+    alignment:
+      type: text
+      label: Aligment
+      description: Side the blockquote text will be aligned. i.g left/center/right/justify
+      preview: 'left'
+    language:
+      type: string
+      label: Language
+      description: The langcode for the active language.
+  libraries:
+    -
+      blockquote:
+        css:
+          component:
+            dist/css/styles.min.css: { minified: true }

@@ -1,0 +1,27 @@
+{# Prepare attributes #}
+{% set prefix = 'hero' %}
+
+{% set classes = [
+  'section',
+  'overflow-hidden',
+  prefix,
+  prefix ~ '--' ~ variant,
+  'relative',
+  'bg-gray-light',
+  'py-8 md:py-0',
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="container">
+   <div class="flex aurora-waves flex-col md:flex-row text-center md:text-left items-center">
+      {% if image %}
+        <div class="image md:order-last">
+          {{ image }}
+        </div>
+      {% endif %}
+      {% if title %}
+        <h1 class="title m-0" id="heading">{{ title }}</h1>
+      {% endif %}
+    </div>
+  </div>
+</div>

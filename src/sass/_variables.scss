@@ -1,0 +1,66 @@
+/*
+* Theme variables.
+* These variables will override bootstrap defaults.
+* To override more variables take a look at @node_modules/bootstrap/scss/_variables.scss
+*/
+
+
+/* Theme paths variables */
+$theme-path: "/themes/custom/yukonca_glider";
+$theme-path-relative: "../../";
+$images-folder-name: "images";
+$DS: "/";
+$image-path: $theme-path + $images-folder-name + $DS;
+$image-path-relative: $theme-path-relative + $images-folder-name + $DS;
+
+$font-icons: "theme-icons";
+
+
+/* Grid variables */
+// $grid-columns: 12; /* Add a custom value if needed */
+// $grid-gutter-width: 30px; /* Add a custom value if needed */
+
+$desktop-breakpoint: lg;
+
+/* Custom breakpoints. Verify the current design to identify if all the breakpoint are necessaries or if we can remove some of them */
+$grid-breakpoints: (
+  xxs: 0,
+  xs: 576px,
+  sm: 667px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+$container-max-widths: (
+  xxs: 100%,
+  xs: 544px,
+  sm: 644px,
+  md: 720px,
+  lg: 960px,
+  xl: 1168px,
+);
+
+$color-white: #FFF;
+$color-black: #000;
+$color-gray: #747474;
+$color-purple: #643F5D;
+$color-yellow: #FFCD57;
+$color-eden: #0D3E4F;
+$color-tiber: #0B3442;
+
+$color-blue000: #0B3442;
+$color-blue100: #0D3E4F;
+$color-blue200: #005A65;
+$color-blue300: #00616D;
+$color-blue400: #00818F;
+$color-blue500: #008392;
+
+$gray: #999;
+$light-gray: #F1F1F1;
+$dark-gray: #747474;
+$darker-gray: #595A59;
+
+
+// Ported over from D7 site.
+$light-border: #D4C7CF;

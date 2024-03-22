@@ -1,0 +1,15 @@
+@import "../placeholders/typography.placeholder";
+
+/* Paragraphes */
+
+.base-text {
+  @extend %base;
+}
+
+.grande-text {
+  @extend %grande;
+}
+
+.mini-titre {
+  @extend %mini-titre;
+}

@@ -1,0 +1,26 @@
+{% set prefix = 'cta-card' %}
+
+{% set classes = [
+  prefix,
+  prefix ~ '--' ~ variant,
+  additionalClass
+] %}
+
+{% set attributes = attributes.addClass(classes) %}
+{% set content %}
+  {% if title %}
+    <div class="title">
+      <h4>{{ title }}</h4>
+      <p class="date">{{ date }}</p>
+    </div>
+  {% endif %}
+
+  {% if content|render %}
+    <div class="content">{{ content }}</div>
+  {% endif %}
+{% endset %}
+
+{{ pattern('section', {
+  content     : content,
+  attribs     : attributes,
+}, 'default') }}

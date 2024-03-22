@@ -1,0 +1,28 @@
+breadcrumb:
+  label: 'Breadcrumb'
+  description: Breadcrumb.
+  variants:
+    default:
+      label: Default
+      items:
+        -
+          text: Home
+          url: javascript:;
+        -
+          text: Library
+          url: javascript:;
+        -
+          text: Data
+          url:
+  fields:
+    items:
+      type: collection
+      label: Items
+      description: List of breadcrumb items.
+      preview: ''
+  libraries:
+    -
+      breadcrumb:
+        css:
+          component:
+            dist/css/styles.min.css: { minified: true }

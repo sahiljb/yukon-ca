@@ -1,0 +1,15 @@
+{# Prepare attributes #}
+{% set prefix = 'hero' %}
+
+{% set classes = [
+  'section',
+  'container',
+  prefix,
+  prefix ~ '--' ~ variant,
+] %}
+
+<div {{ attributes.addClass(classes) }}">
+  <div class="row">
+    <h1 class="title" id="heading">{{ title }}</h1>
+  </div>
+</div>
