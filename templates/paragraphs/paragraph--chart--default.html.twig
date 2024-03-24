@@ -42,55 +42,55 @@
 <div class="chart">
   <h2>{{ paragraph.field_title.value|raw }}</h2>
   <figure class="paragraph-items content">
-    <div id="chart-graph-{{  paragraph.id() }}" class="chart-graph">
-    </div>
+    <div id="chart-graph-{{ paragraph.id() }}" class="chart-graph"></div>
     <div class="chart-description">
       <div id="chart-description-25016" aria-hidden="true" class="highcharts-linked-description">
-                  <p>
-            <strong class="chart-stat">{{ paragraph.field_highlighted_stat.value|raw }}</strong>
-          </p>
+        <p>
+          <strong class="chart-stat">{{ paragraph.field_highlighted_stat.value|raw }}</strong>
+        </p>
                           
-<div class="field field-name-field-chart-description field-type-text-with-summary field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even"> {{ paragraph.field_description.value|raw }}
-</div>
-      </div>
-</div>
-              </div>
-                <section class="yukon-department-sections basic-page-collapsable">
-              <div class="panel-group" id="accordion-25016" role="tablist">
-                  <div class="panel panel-default">
-                      <div class="panel-heading" role="tab" id="Employment-insurance-EI-beneficiaries-in-the-Yukon-by-gender">
-                          <h4 class="panel-title">
-                              <a class="" data-toggle="collapse" data-parent="#accordion-25016" href="#accordion-content-25016" aria-expanded="false" aria-controls="accordion-content-25016">
-                                  Source and notes <br>on data                                  <i class="fa fa-minus-square"></i>
-                              </a>
-                          </h4>
-                      </div>
-                      <div id="accordion-content-25016" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="Employment-insurance-EI-beneficiaries-in-the-Yukon-by-gender" style="">
-                          <div class="panel-body">
-                            
-<div class="field field-name-field-source-notes field-type-text-with-summary field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even"> {{ paragraph.field_source_notes.value|raw }}</div>
-      </div>
-</div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </section>
+        <div class="field field-name-field-chart-description field-type-text-with-summary field-label-hidden">
+          <div class="field-items">
+            <div class="field-item even"> {{ paragraph.field_description.value|raw }} </div>
           </div>
+        </div>
+      </div>
+      <section class="yukon-department-sections basic-page-collapsable">
+        <div class="panel-group" id="accordion-{{ paragraph.id() }}" role="tablist">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="Employment-insurance-EI-beneficiaries-in-the-Yukon-by-gender">
+              <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion-{{ paragraph.id() }}" href="#accordion-content-{{ paragraph.id() }}" aria-expanded="false" aria-controls="accordion-content-{{ paragraph.id() }}">
+                  Source and notes on data <span class="float-right text-blue-400 title-icon"><i class="fa fa-plus-square"></i></span>
+                </a>
+              </h4>
+            </div>
+            <div id="accordion-content-{{ paragraph.id() }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Employment-insurance-EI-beneficiaries-in-the-Yukon-by-gender" style="">
+              <div class="panel-body">
+                <div class="field field-name-field-source-notes field-type-text-with-summary field-label-hidden">
+                  <div class="field-items">
+                    <div class="field-item even"> {{ paragraph.field_source_notes.value|raw }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </figure>
 </div>
 
 <script>
-    let options{{  paragraph.id() }} = {{ paragraph.field_chart_data.value|raw }}
+let options{{  paragraph.id() }} = {{ paragraph.field_chart_data.value|raw }}
+
 options{{  paragraph.id() }}.accessibility = {
   linkedDescription: "#chart-graph-{{  paragraph.id() }}"
 };
+
 options{{  paragraph.id() }}.credits = {
   enabled: false
 };
+
 Highcharts.chart('chart-graph-{{  paragraph.id() }}', options{{  paragraph.id() }});
 </script>
